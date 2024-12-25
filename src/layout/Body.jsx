@@ -40,8 +40,8 @@ const Body = (props) => {
     <div>
 
         {
-          fruits.map((fruits)=>(
-            <Card fruits={fruits} key={fruits.id}/>
+          fruits.map((fruit)=>(
+            <Card fruit={fruit} key={fruit.id}/>
           ))
         }
     </div>
