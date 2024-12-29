@@ -1,49 +1,46 @@
 import React from 'react'
-import Card from '../Components/Card.jsx'
+import Card from '../Components/Card'
 
-const Body = (props) => {
+const Body = () => {
   let fruits = [
     {
-      id :1,
-      price: 6.89,
-      name : 'orange',
-      description : 'fresh orange from thailand'
+      id : 1,
+      name : 'Apple',
+      price : 20.2,
+      description : 'Best fruit in Myanmar'
     },
     {
-      id :2,
-      price: 6.12,
-      name : 'banana',
-      description : 'fresh banana from thailand'
+      id : 2,
+      name : 'Orange',
+      price : 22.2,
+      description : 'Best fruit in Myanmar'
     },
     {
-      id :3,
-      price: 6.80,
-      name : 'piapple',
-      description : 'fresh piapple from thailand'
+      id : 3,
+      name : 'Piapple',
+      price : 10.2,
+      description : 'Best fruit in Myanmar'
     },
     {
-      id :4,
-      price: 6.20,
-      name : 'cava',
-      description : 'fresh cava from thailand'
+      id : 4,
+      name : 'Greatefruit',
+      price : 12.2,
+      description : 'Best fruit in Myanmar'
     },
     {
-      id :5,
-      price: 6.12,
-      name : 'papaya',
-      description : 'fresh papaya from thailand'
-    },
+      id : 5,
+      name : 'Durin',
+      price : 18.2,
+      description : 'Best fruit in Myanmar'
+    }
   ]
-  
   return (
-    
-    <div>
-
-        {
-          fruits.map((fruit)=>(
-            <Card fruit={fruit} key={fruit.id}/>
-          ))
-        }
+    <div className='m-4 '>
+      {
+        fruits.map((fruit)=>(
+          <Card  fruit={fruit} key={fruit.id}/>
+        ))
+      }
     </div>
   )
 }

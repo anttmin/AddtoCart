@@ -1,12 +1,14 @@
 import React from 'react'
 import Nav from '../Components/Nav'
 import Summary from '../Components/Summary'
+import Body from '../layout/Body'
+import Backdrop from '../Components/Backdrop'
 
-const Header = (props) => {
+const Header = () => {
   return (
-    <div className='p-[2rem]'>
-        <Nav showCardHandler={props.showCardHandler}/>
-        <Summary />
+    <div>
+      <Nav />
+      <Summary />
     </div>
   )
 }

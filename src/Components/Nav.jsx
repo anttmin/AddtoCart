@@ -1,16 +1,16 @@
-import React, { useContext } from 'react'
-import { itemContent } from '../store/itemContent'
+import React from 'react'
 
-const Nav = (props) => {
-  const{items} = useContext(itemContent)
-  const totalCart = items.reduce((currentVal,item)=>{
-    return currentVal + item.amount;
-  },0);
+const Nav = () => {
+  let showCart = () => {
+    console.log('hello')
+  }
   return (
-    <div className='flex justify-between'>
-      <h2 className='text-yellow-400 font-bold text-[2xl]'>SHOPPY</h2>
-      <button className='p-2 rounded-md w-[100px] bg-yellow-400 text-white' onClick={props.showCardHandler}>Cart<span>({totalCart})</span></button>
-    </div>
+    <nav className='flex justify-between p-[2rem]'>
+       <h2 className='text-yellow-400 text-2xl font-bold'>Shoppy</h2>
+       <button className='bg-yellow-400 p-2 rounded-md font-medium text-white' onClick={showCart}>
+        Cart <span className='text-white'>(1)</span>
+       </button>
+    </nav>
   )
 }
 

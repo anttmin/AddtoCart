@@ -1,31 +1,16 @@
-import React, { useContext } from 'react'
-import { itemContent } from '../store/itemContent'
+import React from 'react'
 
-const ItemCard = ({ fruit }) => {
-    const {addItem,removeItem} = useContext(itemContent)
-    const addAmountHandler = () => {
-        addItem({...fruit,amount:1})
-
-    }
-
-    const removeAmountHandler = () => {
-        removeItem(fruit.id)
-    }
-
-    return (
-        <div className=' p-[1rem] flex justify-between mt-5 mb-2 ml-2 mr-3 rounded-md border-[2px] border-yellow-200 w-[400px]'>
-            <div>
-                <p className='font-bold text-[18px]'>{fruit.name}</p>
-                <p className='text-[13px]'>{fruit.description}</p>
-                <p className='font-bold text-[14px] italic'>${fruit.price}</p>
-            </div>
-            <div>
-                <p className='bg-yellow-400 text-white w-[50px] text-center rounded'>{fruit.amount}x</p>
-                <button className='bg-yellow-400 mt-2 w-[25px] rounded-sm text-white' onClick={addAmountHandler}>+</button>
-                <button className='bg-yellow-400 ml-1 mt-2 w-[25px] rounded-sm text-white' onClick={removeAmountHandler}>-</button>
-            </div>
-        </div>
-    )
+const ItemCard = ({fruits}) => {
+  return (
+    <div className='border border-yellow-400 mt-2 mb-2 p-4 rounded-md'>
+       <div className='flex justify-between'>
+       <p className='font-bold'>{fruits.name}</p>
+       <p className='font-semibold'>{fruits.price}</p>
+       </div>
+       <div className='flex justify-between'><p>{fruits.description}</p>
+       <input type='number' className='InputBox border border-yellow-400 rounded-sm focus:outline-yellow-400 pl-2' min={1} max={5}/></div>
+    </div>
+  )
 }
 
 export default ItemCard

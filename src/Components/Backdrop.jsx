@@ -1,19 +1,12 @@
 import React from 'react'
 import Cart from './Cart'
 
-const Backdrop = (props) => {
+const Backdrop = () => {
   return (
-    <>
-      {
-        props.showCard ? <div className='bg-color fixed top-0 left-0 bottom-0 right-0  w-[100%]'>
-          <div className='p-2 w-[500px] h-[350px]  overflow-auto  rounded-md absolute top-[20%] left-[30%] bg-slate-100 mb-2'>
-            <Cart hideCardHandler={props.hideCardHandler}/>
-          </div>
-        </div> : null
-      }
-    </>
+    <div className='w-[100%] h-[100vh] bg-color fixed top-0 right-0 left-0 bottom-0 '>
+      <Cart />
+    </div>
   )
 }
 
 export default Backdrop
-
